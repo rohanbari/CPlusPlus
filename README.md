@@ -1,6 +1,6 @@
 [![cplusplus.png](https://tiny.one/cplusplus)](https://postimg.cc/TKVTVfQZ)
 
-Learning CPlusPlus at the next-level.
+Learning CPlusPlus at the next-level. The code is available in [`src`](./src) folder.
 
 ## Coding Environment
   * **Text editor.** Visual Studio Code for Windows
@@ -27,7 +27,7 @@ Don't forget to give this project a star, thanks!
 
 ## License
 This open-source project is distributed under MIT License.
-Please refer to the `LICENSE` file.
+Please refer to the [`LICENSE`](./LICENSE) file.
 
 ## Contact
  * **Email address.** rohanbari4@gmail.com
