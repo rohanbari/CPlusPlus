@@ -15,7 +15,12 @@
 
 using namespace std;
 
+/**
+ * @brief The sample class.
+ *
+ */
 class MyClass {
+    string className;
     int member;
 
 public:
@@ -24,8 +29,9 @@ public:
         member = 15;
         cout << "Constructing MyClass" << endl;
     }
-    MyClass(const int& rhs)
-        : member(rhs)
+    MyClass(const string& name, const int& rhs)
+        : className(name)
+        , member(rhs)
     {
         cout << "Constructing MyClass with copy member" << endl;
     }
@@ -34,18 +40,45 @@ public:
         cout << "Destructing MyClass" << endl;
     }
 
+    string getName(void) const
+    {
+        return className;
+    }
     int getMember(void) const
     {
         return member;
     }
 };
 
-int main(void)
+/**
+ * @brief Example describing the usage of unique_ptr.
+ *
+ */
+void useUniquePointer(void)
 {
     // Type deduction also works.
-    unique_ptr<MyClass> uniquePtr = make_unique<MyClass>();
+    unique_ptr<MyClass> uniquePtr = make_unique<MyClass>("MySuperClass", 10);
     // Using the pointer-like behavior.
     cout << uniquePtr->getMember() << endl;
+}
+
+/**
+ * @brief Example describing the usage of shared_ptr.
+ *
+ */
+void useSharedPointer(void)
+{
+    // Type deduction can work here, too.
+    shared_ptr<MyClass> sharedPtr = make_shared<MyClass>("MyClass", 5);
+
+    if (sharedPtr)
+        cout << sharedPtr->getName();
+}
+
+int main(void)
+{
+    useUniquePointer();
+    useSharedPointer();
 
     return EXIT_SUCCESS;
 }
