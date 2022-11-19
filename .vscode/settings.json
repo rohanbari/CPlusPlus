@@ -20,6 +20,8 @@
         "istream": "cpp",
         "memory": "cpp",
         "ratio": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "iostream": "cpp",
+        "cstring": "cpp"
     }
 }
