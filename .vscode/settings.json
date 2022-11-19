@@ -19,6 +19,7 @@
         "iosfwd": "cpp",
         "istream": "cpp",
         "memory": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "unordered_map": "cpp"
     }
 }

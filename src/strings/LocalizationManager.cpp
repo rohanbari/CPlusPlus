@@ -77,7 +77,7 @@ public:
     string getString(StringId stringId) const
     {
         stringstream result;
-        result << stringId << '-x-';
+        result << stringId << "-x-";
 
         string finalString { result.str() };
         auto it = currentStringPack->find(stringId);
