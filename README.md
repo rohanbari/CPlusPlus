@@ -3,7 +3,8 @@
 Learning CPlusPlus at the next-level. The code is available in [`src`](./src) folder.
 
 ## Coding Environment
-  * **Text editor.** Visual Studio Code for Windows
+  * **Environment.** Windows 10 Pro 22H2
+  * **Text editor.** Visual Studio Code
   * **Compiler.** g++ (tdm64-1) 10.3.0
   * **Coding style.** WebKit
 
