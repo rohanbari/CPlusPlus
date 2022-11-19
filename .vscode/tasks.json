@@ -6,6 +6,9 @@
             "command": "C:\\TDM-GCC-64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
+                "-Wall",
+                "-O3",
+                "-pedantic",
                 "-g",
                 "${file}",
                 "-o",
@@ -14,9 +17,7 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true
