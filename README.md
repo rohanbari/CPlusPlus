@@ -1,6 +1,8 @@
 [![cplusplus.png](https://tiny.one/cplusplus)](https://postimg.cc/TKVTVfQZ)
 
-Learning CPlusPlus at the next-level. The code is available in [`src`](./src) folder.
+**Welcome to the CPlusPlus!**
+
+I'm learning C++ at the next level. The code is available under the [`src`](./src) directory.
 
 ## Coding Environment
   * **Environment.** Windows 10 Pro 22H2
@@ -9,8 +11,8 @@ Learning CPlusPlus at the next-level. The code is available in [`src`](./src) fo
   * **Coding style.** WebKit
 
 ## Contributing
-Contributions are what make the open source community such an amazing place to
-learn, inspire, and create. Any contributions you make are highly appreciated.
+Contributions make the open-source community an amazing place to
+learn, inspire, and create. The contributions you make are highly appreciated.
 
 **Here is how to do that.**
 
@@ -24,10 +26,10 @@ learn, inspire, and create. Any contributions you make are highly appreciated.
   
   5. Open a Pull Request
 
-Don't forget to give this project a star, thanks!
+If you have liked my code, don't forget to give a star. Thanks!
 
 ## License
-This open-source project is distributed under MIT License.
+This open-source project has licensed under MIT License.
 Please refer to the [`LICENSE`](./LICENSE) file.
 
 ## Contact
