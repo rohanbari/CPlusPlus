@@ -60,6 +60,10 @@ int main(void)
     Vehicle truck(8);
     Vehicle motorcycle(Vehicle(2));
 
+    // When uncommented, the line raises the following compiler error:
+    //   member "Vehicle::numberOfWheels" (declared at line 26) is inaccessible
+    // car.numberOfWheels = 32;
+
     car.displayWheels();
     truck.displayWheels();
     motorcycle.displayWheels();
