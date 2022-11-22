@@ -2,7 +2,8 @@
 
 **Welcome to the CPlusPlus!**
 
-I'm learning C++ at the next level. The code is available under the [`src`](./src) directory.
+I'm learning C++ at the next level. The code is available under the
+[`src`](./src) directory.
 
 ## Coding Environment
   * **Environment.** Windows 10 Pro 22H2
@@ -11,8 +12,8 @@ I'm learning C++ at the next level. The code is available under the [`src`](./sr
   * **Coding style.** WebKit
 
 ## Contributing
-Contributions make the open-source community an amazing place to
-learn, inspire, and create. The contributions you make are highly appreciated.
+Contributions make the open-source community an amazing place to learn, inspire,
+and create. The contributions you make are highly appreciated.
 
 **Here is how to do that.**
 

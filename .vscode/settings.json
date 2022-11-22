@@ -59,6 +59,9 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "float.h": "c",
+        "limits.h": "c",
+        "syslimits.h": "c"
     }
 }
