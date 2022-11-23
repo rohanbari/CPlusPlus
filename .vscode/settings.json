@@ -62,6 +62,7 @@
         "valarray": "cpp",
         "float.h": "c",
         "limits.h": "c",
-        "syslimits.h": "c"
+        "syslimits.h": "c",
+        "stdio.h": "c"
     }
 }
