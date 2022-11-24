@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Specific sources
+src/1.c
+src/1.cpp
