@@ -2,12 +2,23 @@
     "configurations": [
         {
             "name": "Win32",
-            "includePath": ["${workspaceFolder}/**"],
-            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-            "compilerPath": "C:\\TDM-GCC-64\\bin\\gcc.exe",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/TDM-GCC-64/bin/g++.exe",
             "cStandard": "c99",
             "cppStandard": "c++20",
-            "intelliSenseMode": "windows-gcc-x64"
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerArgs": [
+                "-O3",
+                "-pedantic",
+                "-Wall"
+            ]
         }
     ],
     "version": 4
