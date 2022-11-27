@@ -39,7 +39,7 @@ namespace ns {
         while (iss >> temp)
             v.emplace_back(temp);
     }
-}
+} // namespace ns
 
 int main(void)
 {
