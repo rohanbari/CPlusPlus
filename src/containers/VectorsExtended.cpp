@@ -5,7 +5,6 @@
  * @version 0.1
  * @date 2022-11-26
  *
- * @warning Incomplete program.
  *
  * Copyright (c) 2022 rohanbari
  *
@@ -39,14 +38,44 @@ namespace ns {
         while (iss >> temp)
             v.emplace_back(temp);
     }
+
+    /**
+     * @brief Display the contents of the vector.
+     *
+     * @param v The vector
+     */
+    void display(const Vector& v)
+    {
+        for (const auto& it : v)
+            cout << it << '\n';
+        cout << endl;
+    }
+
+    /**
+     * @brief Information about the vector.
+     *
+     * @param v The vector
+     */
+    void info(const Vector& v)
+    {
+        size_t size = v.size();
+        size_t capacity = v.capacity();
+
+        cout << "Size: " << size << endl << "Capacity: " << capacity << endl;
+    }
 } // namespace ns
 
 int main(void)
 {
     Vector container {};
 
-    // After this line, the container is modified globally.
+    // On the next line, the container is modified globally.
     ns::fill(container);
+    ns::display(container);
+    ns::info(container);
+
+    // NOTE: Iterators and algorithms can be used with containers.
+    //       This is the main advantage.
 
     return EXIT_SUCCESS;
 }
