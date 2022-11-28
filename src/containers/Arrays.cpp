@@ -21,20 +21,19 @@ using namespace std;
 const int SIZE = 5;
 
 namespace ns {
-void methodPrimary(const array<int, SIZE>& container)
-{
-    for (auto&& it : container)
-        cout << it << ' ';
-    cout << endl;
-}
+    void methodPrimary(const array<int, SIZE>& container)
+    {
+        for (auto&& it : container)
+            cout << it << ' ';
+        cout << endl;
+    }
 
-void methodSecondary(array<int, SIZE>&& container)
-{
-    for_each(container.cbegin(), container.cend(), [](auto&& value) {
-        cout << value << ' ';
-    });
-    cout << endl;
-}
+    void methodSecondary(array<int, SIZE>&& container)
+    {
+        for_each(container.cbegin(), container.cend(),
+            [](auto&& value) { cout << value << ' '; });
+        cout << endl;
+    }
 };
 
 int main(void)
