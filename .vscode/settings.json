@@ -63,6 +63,8 @@
         "float.h": "c",
         "limits.h": "c",
         "syslimits.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "list": "cpp",
+        "set": "cpp"
     }
 }
