@@ -35,7 +35,7 @@ public:
     {
     }
 
-    const string getName() const noexcept { return name; }
+    const string& getName() const noexcept { return name; }
 
     ~Object() = default;
 };
