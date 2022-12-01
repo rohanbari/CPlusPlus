@@ -37,7 +37,7 @@ AllowShortEnumsOnASingleLine: true
 AllowShortBlocksOnASingleLine: Empty
 AllowShortCaseLabelsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: InlineOnly
-AllowShortLambdasOnASingleLine: All
+AllowShortLambdasOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
 AlwaysBreakAfterDefinitionReturnType: None
