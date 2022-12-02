@@ -27,7 +27,7 @@ public:
         : member(rhs)
     {
     }
-    constexpr Demo(const T& rhs)
+    constexpr Demo(const Demo& rhs)
         : member(rhs.member)
     {
     }
