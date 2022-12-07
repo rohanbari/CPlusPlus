@@ -60,10 +60,11 @@ namespace ns {
         });
         auto countPunct = count_if(line.cbegin(), line.cend(), [](auto&& ch) {
             return static_cast<bool>(ispunct(ch));
-        });
+        }
+        );
 
         cout << "Capital letters: " << countUpper << endl
-             << "Small letters: " << countUpper << endl
+             << "Small letters: " << countLower << endl
              << "Numeric letters: " << countNumeric << endl
              << "Punctuation letters: " << countPunct << endl;
     }
