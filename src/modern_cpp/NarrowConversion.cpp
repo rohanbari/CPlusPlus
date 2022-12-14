@@ -27,8 +27,7 @@ int main(void)
     double number { 1.0 };
     float unlostPrecision { static_cast<float>(number) };
 
-    cout << superNumber << endl
-         << unlostPrecision << endl;
+    cout << superNumber << endl << unlostPrecision << endl;
 
     return EXIT_SUCCESS;
 }

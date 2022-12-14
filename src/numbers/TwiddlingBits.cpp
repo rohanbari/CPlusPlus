@@ -25,10 +25,8 @@ void bitAnd(void)
 {
     uint32_t myBit { 0x00011000 };
 
-    cout << myBit << " & " << myBit << ": " << (myBit & myBit)
-         << endl
-         << myBit << " & ~" << myBit << ": " << (myBit & ~myBit)
-         << endl
+    cout << myBit << " & " << myBit << ": " << (myBit & myBit) << endl
+         << myBit << " & ~" << myBit << ": " << (myBit & ~myBit) << endl
          << endl;
 }
 
@@ -41,10 +39,8 @@ void bitOr(void)
     uint32_t left { 0x00011000 };
     uint32_t right { 0x00010100 };
 
-    cout << left << " | " << right << ": " << (left | right)
-         << endl
-         << left << " | ~" << left << ": " << (left | ~left)
-         << endl
+    cout << left << " | " << right << ": " << (left | right) << endl
+         << left << " | ~" << left << ": " << (left | ~left) << endl
          << endl;
 }
 
@@ -57,10 +53,8 @@ void bitXor(void)
     uint32_t left { 0x00011000 };
     uint32_t right { 0x00010100 };
 
-    cout << left << " ^ " << right << ": " << (left ^ right)
-         << endl
-         << left << " ^ ~" << left << ": " << (left ^ ~left)
-         << endl
+    cout << left << " ^ " << right << ": " << (left ^ right) << endl
+         << left << " ^ ~" << left << ": " << (left ^ ~left) << endl
          << endl;
 }
 

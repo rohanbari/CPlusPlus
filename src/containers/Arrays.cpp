@@ -30,8 +30,9 @@ namespace ns {
 
     void methodSecondary(array<int, SIZE>&& container)
     {
-        for_each(container.cbegin(), container.cend(),
-            [](auto&& value) { cout << value << ' '; });
+        for_each(container.cbegin(), container.cend(), [](auto&& value) {
+            cout << value << ' ';
+        });
         cout << endl;
     }
 };

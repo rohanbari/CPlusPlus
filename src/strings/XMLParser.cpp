@@ -74,8 +74,7 @@ int main(void)
 
             xml_node<>* description { book->first_node("description") };
             validateNode(description);
-            cout << "Description: " << description->value() << endl
-                 << endl;
+            cout << "Description: " << description->value() << endl << endl;
 
             // These points to the next sibling of the DOM tree.
             book = book->next_sibling("book");

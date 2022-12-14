@@ -29,8 +29,7 @@ int main(void)
     cout << "long int: " << numeric_limits<long int>::min() << endl;
     cout << "long long int: " << numeric_limits<long long int>::min() << endl;
 
-    cout << endl
-         << "Maximum values of the integral types:" << endl;
+    cout << endl << "Maximum values of the integral types:" << endl;
 
     cout << "short int: " << numeric_limits<short int>::max() << endl;
     cout << "int: " << numeric_limits<int>::max() << endl;

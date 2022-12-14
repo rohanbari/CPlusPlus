@@ -65,6 +65,7 @@
         "syslimits.h": "c",
         "stdio.h": "c",
         "list": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "unordered_set": "cpp"
     }
 }

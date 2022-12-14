@@ -34,11 +34,7 @@ public:
      * @brief Display the value of the members.
      *
      */
-    void display(void)
-    {
-        cout << simpleMember << endl
-             << powerMember << endl;
-    }
+    void display(void) { cout << simpleMember << endl << powerMember << endl; }
 };
 
 int main(void)

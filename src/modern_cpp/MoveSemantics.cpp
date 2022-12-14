@@ -43,10 +43,7 @@ public:
         cout << "Copying: " << getMember() << endl;
     }
 
-    int getMember(void) const
-    {
-        return *member;
-    }
+    int getMember(void) const { return *member; }
 };
 int MyClass::counter { 0 };
 

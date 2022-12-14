@@ -35,19 +35,10 @@ public:
     {
         cout << "Constructing MyClass with copy member" << endl;
     }
-    ~MyClass()
-    {
-        cout << "Destructing MyClass" << endl;
-    }
+    ~MyClass() { cout << "Destructing MyClass" << endl; }
 
-    string getName(void) const
-    {
-        return className;
-    }
-    int getMember(void) const
-    {
-        return member;
-    }
+    string getName(void) const { return className; }
+    int getMember(void) const { return member; }
 };
 
 /**

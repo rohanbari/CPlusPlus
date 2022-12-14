@@ -25,69 +25,68 @@ using namespace std;
  *
  */
 namespace Localization {
-using StringId = int32_t;
-enum class Language {
-    en_US,
-    en_IN,
-    total
-};
+    using StringId = int32_t;
+    enum class Language { en_US, en_IN, total };
 
-const StringId STRING_COLOR { 0 };
+    const StringId STRING_COLOR { 0 };
 
-class Manager {
-    using Strings = unordered_map<StringId, string>;
-    using StringPack = array<Strings, static_cast<size_t>(Language::total)>;
+    class Manager {
+        using Strings = unordered_map<StringId, string>;
+        using StringPack = array<Strings, static_cast<size_t>(Language::total)>;
 
-    StringPack stringPack;
-    Strings* currentStringPack { nullptr };
+        StringPack stringPack;
+        Strings* currentStringPack { nullptr };
 
-    uint32_t languageIndex;
+        uint32_t languageIndex;
 
-public:
-    Manager()
-    {
-        // en-US Localization
-        static const uint32_t _EN_US { static_cast<uint32_t>(Language::en_US) };
-        stringPack[_EN_US][STRING_COLOR] = "COLOR"s;
+    public:
+        Manager()
+        {
+            // en-US Localization
+            static const uint32_t _EN_US { static_cast<uint32_t>(
+                Language::en_US) };
+            stringPack[_EN_US][STRING_COLOR] = "COLOR"s;
 
-        // en-IN Localization
-        static const uint32_t _EN_IN { static_cast<uint32_t>(Language::en_IN) };
-        stringPack[_EN_IN][STRING_COLOR] = "COLOUR"s;
+            // en-IN Localization
+            static const uint32_t _EN_IN { static_cast<uint32_t>(
+                Language::en_IN) };
+            stringPack[_EN_IN][STRING_COLOR] = "COLOUR"s;
 
-        // By default, en_US localization is set.
-        setLanguage(Language::en_US);
-    }
+            // By default, en_US localization is set.
+            setLanguage(Language::en_US);
+        }
 
-    /**
-     * @brief Refers current string pack to the passed language's string pack.
-     *
-     * @param language Language to be used
-     */
-    void setLanguage(Language language)
-    {
-        currentStringPack = &(stringPack[static_cast<uint32_t>(language)]);
-    }
+        /**
+         * @brief Refers current string pack to the passed language's string
+         * pack.
+         *
+         * @param language Language to be used
+         */
+        void setLanguage(Language language)
+        {
+            currentStringPack = &(stringPack[static_cast<uint32_t>(language)]);
+        }
 
-    /**
-     * @brief Get the String object.
-     *
-     * @param stringId String ID
-     * @return string  The localized string
-     */
-    string getString(StringId stringId) const
-    {
-        stringstream result;
-        result << stringId << "-x-";
+        /**
+         * @brief Get the String object.
+         *
+         * @param stringId String ID
+         * @return string  The localized string
+         */
+        string getString(StringId stringId) const
+        {
+            stringstream result;
+            result << stringId << "-x-";
 
-        string finalString { result.str() };
-        auto it = currentStringPack->find(stringId);
+            string finalString { result.str() };
+            auto it = currentStringPack->find(stringId);
 
-        if (it != currentStringPack->end())
-            finalString = it->second;
+            if (it != currentStringPack->end())
+                finalString = it->second;
 
-        return finalString;
-    }
-};
+            return finalString;
+        }
+    };
 }
 
 int main(void)

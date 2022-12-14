@@ -63,10 +63,7 @@ class DerivedDemo : Demo {
 public:
     DerivedDemo() = default;
 
-    inline void func() override
-    {
-        cout << "Virtual function called." << endl;
-    }
+    inline void func() override { cout << "Virtual function called." << endl; }
 };
 
 int main(void)

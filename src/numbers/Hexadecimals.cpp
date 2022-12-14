@@ -25,8 +25,7 @@ int main(void)
     for (const auto& it : hexCode) {
         cout << dec << "Decimal: " << it << endl;
         cout << hex << "Hex: " << it << endl;
-        cout << showbase << "Hex with base: " << it << endl
-             << endl;
+        cout << showbase << "Hex with base: " << it << endl << endl;
     }
 
     return EXIT_SUCCESS;
