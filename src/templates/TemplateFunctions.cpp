@@ -1,7 +1,10 @@
 /**
  * @file TemplateFunctions.cpp
  * @author Rohan Bari (rohanbari4@gmail.com)
- * @brief
+ * @brief Templates are useful when the type has to be concrete at compile-time,
+ * but the usage of the templated class/function is not limited to a single type
+ * of data.
+ *
  * @version 0.1
  * @date 15-12-2022
  *
