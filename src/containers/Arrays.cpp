@@ -39,7 +39,7 @@ namespace ns {
 
 int main(void)
 {
-    array<int, SIZE> container { 4, 3, 1, 6, 8 };
+    array<int, SIZE> container {};
 
     // Pass-by-reference
     ns::methodPrimary(container);
