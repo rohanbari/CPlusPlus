@@ -8,7 +8,7 @@
             "cStandard": "c99",
             "cppStandard": "c++20",
             "intelliSenseMode": "windows-gcc-x64",
-            "compilerArgs": ["-O3", "-pedantic", "-Wall"]
+            "compilerArgs": ["-O3", "-pedantic", "-Wall", "-Wextra"]
         }
     ],
     "version": 4

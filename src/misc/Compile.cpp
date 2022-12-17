@@ -32,11 +32,11 @@ void validate_args(const int argc, const char* p)
 /**
  * @brief Compile the passed program.
  *
- * @param prog
+ * @param prog Program file
  */
 void execute(const char* prog)
 {
-    string cmd = "g++.exe ";
+    string cmd = "g++.exe -O3 -pedantic -Wall -Wextra -s -g ";
     cmd.append(prog);
 
     if (system(cmd.c_str()) != EXIT_SUCCESS) {

@@ -34,7 +34,7 @@ struct SDBM {
      */
     constexpr static UInt calculateHash(const char* const hash, UInt& value)
     {
-        UInt ch {SDBM<length - 1>::calculateHash(hash, value)}; // No suggestion
+        UInt ch {SDBM<length - 1>::calculateHash(hash, value)};
         value = ch + (value << 6) + (value << 16) - value;
 
         return hash[length - 1];
