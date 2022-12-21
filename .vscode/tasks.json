@@ -10,7 +10,6 @@
                 "-O3",
                 "-pedantic",
                 "-Wextra",
-                "-s",
                 "-g",
                 "${file}",
                 "-o",

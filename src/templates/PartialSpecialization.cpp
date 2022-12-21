@@ -65,7 +65,7 @@ T add(const T& a, const T& b)
 
 // To overcome the above-mentioned issue, partial specialization comes.
 template <>
-demo add(const demo& a, const demo& b)
+demo add<demo>(const demo& a, const demo& b)
 {
     return add(a.getData(), b.getData());
 }
