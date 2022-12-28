@@ -11,6 +11,7 @@
 
 #include <chrono>
 #include <ctime>
+#include <functional>
 #include <iostream>
 #include <thread>
 
@@ -32,25 +33,32 @@ void getCurrentDateAndTime(void)
 }
 
 /**
- * @brief Time comparison using chrono library.
+ * @brief Get the time elapsed between an occurring event.
  *
+ * @param pFunc A function to execute
+ * @return      int64_t
  */
-void timeComparison(void)
+int64_t timeComparison(function<void()> pFunc)
 {
     auto startPoint = system_clock::now();
 
-    this_thread::sleep_for(500ms);
+    pFunc();
 
     auto endPoint = system_clock::now();
     auto timeElapsed = duration_cast<milliseconds>(endPoint - startPoint);
 
-    cout << "Time taken to execute syntax: " << timeElapsed.count() << endl;
+    return timeElapsed.count();
 }
 
 int main(void)
 {
     getCurrentDateAndTime();
-    timeComparison();
+
+    auto testFunc = []() {
+        this_thread::sleep_for(500ms);
+    };
+    int64_t t = timeComparison(testFunc);
+    cout << t << endl;
 
     return EXIT_SUCCESS;
 }
