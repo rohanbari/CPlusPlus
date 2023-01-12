@@ -8,9 +8,9 @@ make it better and helpful for the future visitors.
 
 ## Coding Environment
 
--   **Environment.** Windows 10 Pro 22H2
+-   **Environment.** Ubuntu 22.04.1 LTS
 -   **Text editor.** Visual Studio Code
--   **Compiler.** g++ (tdm64-1) 10.3.0
+-   **Compiler.** `g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0`
 -   **Coding style.** WebKit (customized `.clang-format`)
 
 ## Contributing
