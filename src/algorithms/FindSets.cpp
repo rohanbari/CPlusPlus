@@ -1,11 +1,13 @@
 /**
  * @file FindSets.cpp
  * @author rohanbari (rohanbari4@gmail.com)
- * @brief
+ * @brief This is a C++ program to find the item in a set with custom
+ * conditions and comparison operator-overload.
+ *
  * @version 0.1
  * @date 07-12-2022
  *
- * @copyright Copyright (c) 2022
+ * Copyright (c) 2022 rohanbari
  *
  */
 
@@ -42,12 +44,12 @@ int main()
 {
     // I like to know about weapons, especially guns.
     set<Item> container {
-        { "AK-47", "A very powerful but noisy rifle.", 1, 2500 },
-        { "MP5A3", "A smooth and silent rifle.", 5, 2350 },
-        { "G-17 SD", "A sidearm weapon.", 3, 900 },
+        {"AK-47", "A very powerful but noisy rifle.", 1, 2500},
+        {"MP5A3", "A smooth and silent rifle.", 5, 2350},
+        {"G-17 SD", "A sidearm weapon.", 3, 900},
     };
 
-    auto it = container.find({ "MP5A3", "", 0, 0.0 });
+    auto it = container.find({"MP5A3", "", 0, 0.0});
     if (it != container.end())
         cout << "This weapon is available in our stock.\n";
     else

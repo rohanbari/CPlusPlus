@@ -2,9 +2,9 @@
  * @file VectorsExtended.cpp
  * @author rohanbari (rohanbari4@gmail.com)
  * @brief Welcome to the world of vectors! Let's use the most of it.
+ *
  * @version 0.1
  * @date 2022-11-26
- *
  *
  * Copyright (c) 2022 rohanbari
  *

@@ -35,7 +35,7 @@ int main()
     struct foo { };
 
     canHash("Hello, world!"s); // Hashable
-    // canHash(foo{}); // Not hashable -- erroneous line of code.
+    // canHash(foo{}); // Not hashable as it is not convertible to size_t.
 
     return EXIT_SUCCESS;
 }

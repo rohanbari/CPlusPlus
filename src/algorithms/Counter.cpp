@@ -1,3 +1,15 @@
+/**
+ * @file Counter.cpp
+ * @author Rohan Bari (rohanbari4@gmail.com)
+ * @brief Using std::count() with STL iterators effectively.
+ *
+ * @version 0.1
+ * @date 07-12-2022
+ *
+ * Copyright (c) 2022 rohanbari
+ *
+ */
+
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -34,7 +46,7 @@ namespace ns {
      */
     void firstScenario()
     {
-        vector<int> container { 3, -5, 2, 9, 6, 4, 5, 6, 5, 6 };
+        vector<int> container {3, -5, 2, 9, 6, 4, 5, 6, 5, 6};
         auto count = std::count(container.cbegin(), container.cend(), 6);
 
         cout << "Occurrences of 6s: " << count << endl;
@@ -74,7 +86,7 @@ namespace ns {
      */
     void thirdScenario()
     {
-        vector<Demo> container { 5, -3, 2, 3, 5, 3, 5, 1 };
+        vector<Demo> container {5, -3, 2, 3, 5, 3, 5, 1};
         auto countFive
             = std::count(container.cbegin(), container.cend(), Demo(5));
 

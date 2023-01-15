@@ -1,7 +1,16 @@
 /**
  * @file MoveConstructor.cpp
  * @author rohanbari (rohanbari4@gmail.com)
- * @brief
+ * @brief std::move() does not move anything, indeed.
+ *
+ * Move constructor moves the resources in the heap, i.e., unlike copy
+ * constructors that copies the data of the existing object and assigns it to
+ * the new object. Move c'tor makes the pointer of the declared object to point
+ * to the data of a temporary object and nullifies the pointer of the temporary
+ * objects.
+ *
+ * Thus, move constructor prevents unnecessarily copying data in the memory.
+ *
  * @version 0.1
  * @date 2022-11-24
  *
@@ -66,7 +75,7 @@ public:
 int main(void)
 {
     // Instantiation of myValue object.
-    Demo<int> myValue { 10 };
+    Demo<int> myValue {10};
     // Invocation of the overridden move constructor.
     // A famous note: "std::move() does not really move anything."
     Demo<int> myMovedValue = move(myValue);

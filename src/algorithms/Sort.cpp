@@ -8,7 +8,7 @@
  * @version 0.1
  * @date 07-12-2022
  *
- * @copyright Copyright (c) 2022
+ * Copyright (c) 2022 rohanbari
  *
  */
 
@@ -20,7 +20,7 @@ using Const = const int&;
 
 int main()
 {
-    std::vector<int> container { 11, -3, 5, 0, 4, 9, 8 };
+    std::vector<int> container {11, -3, 5, 0, 4, 9, 8};
     // * The passed iterator must be modifiable.
     // * A lambda function with two parameters is given as a predicate.
     // * This sorts as: greatest --> lowest

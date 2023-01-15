@@ -26,7 +26,7 @@ using namespace std;
 int main(void)
 {
     // A vector container
-    vector<int> container { 10, 12, 5, 13, 6 };
+    vector<int> container {10, 12, 5, 13, 6};
     // A closure is an unnamed function definition defined as an lvalue.
     auto closure = [](const int& value) {
         cout << value << ' ';

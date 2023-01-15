@@ -1,3 +1,14 @@
+/**
+ * @file MutableMembers.cpp
+ * @author Rohan Bari (rohanbari4@gmail.com)
+ * @brief This program illustrates how mutable and immutable variables work.
+ * @version 0.1
+ * @date 18-11-2022
+ *
+ * Copyright (c) 2022 rohanbari
+ *
+ */
+
 #include <iostream>
 
 using namespace std;

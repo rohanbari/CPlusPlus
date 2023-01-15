@@ -4,6 +4,7 @@
  * @brief The STL provides algorithms that allow you to find both the largest
  * and smallest values in an STL container. These are the min_element and
  * max_element functions.
+ *
  * @version 0.1
  * @date 2022-12-01
  *
@@ -58,7 +59,7 @@ namespace ns {
     void scenarioFirst(void)
     {
         // A vector container
-        std::vector<int> container { 2, -4, 4, 3, 0, 1, 5 };
+        std::vector<int> container {2, -4, 4, 3, 0, 1, 5};
 
         // min_element and max_element functions have complexity of O(n).
         auto min = std::min_element(container.begin(), container.end());
@@ -74,7 +75,7 @@ namespace ns {
      */
     void scenarioSecond(void)
     {
-        std::vector<Demo> container { 3, 5, -1, 8, 4, -5, 0 };
+        std::vector<Demo> container {3, 5, -1, 8, 4, -5, 0};
         // Custom comparator
         auto comp = [](const Demo& lhs, const Demo& rhs) {
             return lhs.getMember() < rhs.getMember();

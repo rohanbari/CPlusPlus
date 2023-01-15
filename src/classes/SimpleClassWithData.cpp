@@ -1,7 +1,8 @@
 /**
  * @file SimpleClassWithData.cpp
  * @author rohanbari (rohanbari4@gmail.com)
- * @brief
+ * @brief A simple demo class with data management in it.
+ *
  * @version 0.1
  * @date 2022-11-21
  *

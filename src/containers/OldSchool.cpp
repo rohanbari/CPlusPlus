@@ -17,7 +17,7 @@ const int SIZE = 5;
 
 int main(void)
 {
-    int array[SIZE] = { 10, 2, 6, 3, 9 };
+    int array[SIZE] = {10, 2, 6, 3, 9};
 
     // For-loop method
     for (int i = 0; i < SIZE; i++)

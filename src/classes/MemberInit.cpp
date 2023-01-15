@@ -1,3 +1,16 @@
+/**
+ * @file MemberInit.cpp
+ * @author Rohan Bari (rohanbari4@gmail.com)
+ * @brief There are several ways to access the class fields in C++. Let's have
+ * a look at them with examples.
+ *
+ * @version 0.1
+ * @date 22-11-2022
+ *
+ * Copyright (c) 2022 rohanbari
+ *
+ */
+
 #include <cinttypes>
 #include <iostream>
 
@@ -22,10 +35,7 @@ public:
         : wheels(rhs.wheels)
     {
     }
-    ~Vehicle()
-    {
-        wheels = 0;
-    }
+    ~Vehicle() { wheels = 0; }
 
     // Overloading operator<< that supports output streams like cout.
     friend ostream& operator<<(ostream& out, const Vehicle& vehicle)
@@ -45,7 +55,7 @@ int main(void)
     cout << "human: " << human << endl;
 
     // 2: Along uniform initialization, copy elision-like way can also be used.
-    Vehicle motorcycle { 2 };
+    Vehicle motorcycle {2};
     cout << "motorcycle: " << motorcycle << endl;
 
     /**
@@ -57,11 +67,11 @@ int main(void)
     cout << "car: " << car << endl;
 
     // 4: Instantiation with the help of initialization list.
-    Vehicle truck { Vehicle { 8 } };
+    Vehicle truck {Vehicle {8}};
     cout << "truck: " << truck << endl;
 
     // 5: Copy elision-like method with initialization list. (unlikely to use!)
-    Vehicle train(Vehicle { 72 });
+    Vehicle train(Vehicle {72});
     cout << "train: " << train << endl;
 
     return EXIT_SUCCESS;
