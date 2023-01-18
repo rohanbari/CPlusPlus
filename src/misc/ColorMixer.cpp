@@ -18,10 +18,27 @@
 
 using Colors = std::vector<std::string>;
 
-namespace constants {
+/**
+ * @brief This namespace should not be used in the main function directly.
+ *
+ */
+namespace pfs {
 
-    const char VALID_HEX[] {"0123456789abcdef"};
-} // namespace constants
+    /**
+     * @brief Validate whether the string is a valid hex code.
+     *
+     * @param s The passed string
+     * @return true
+     * @return false
+     */
+    bool validate_hex_notation(const std::string& s)
+    {
+        return s.length() == 6
+            && std::all_of(s.begin(), s.end(), [](unsigned char c) {
+                   return std::isxdigit(c);
+               });
+    }
+}
 
 namespace ns {
 
@@ -50,24 +67,12 @@ namespace ns {
 
     void validate_hex(Colors& colors)
     {
-        bool flag = true;
-
         for (const auto& it : colors) {
-            if (it.length() != 6) {
-                std::cerr << "error: Hex code must be of length 6.\n";
-                exit(EXIT_FAILURE);
+            bool flag = pfs::validate_hex_notation(it);
+            if (!flag) {
+                std::cerr << "error: Hex code " << it << " is invalid.\n";
+                break;
             }
-
-            for (const auto& subIt : it)
-                if (subIt < '0' || subIt > '9')
-                    if (subIt < 'A' || subIt > 'F') {
-                        flag = false;
-                        break;
-                    }
-        }
-        if (!flag) {
-            std::cerr << "error: Hex code(s) are not given correctly.\n";
-            exit(EXIT_FAILURE);
         }
     }
 } // namespace ns
