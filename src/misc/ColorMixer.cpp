@@ -65,14 +65,53 @@ namespace ns {
         iss.clear();
     }
 
-    void validate_hex(Colors& colors)
+    /**
+     * @brief Validate if the hex code is a valid color.
+     *
+     * @param colors The colors container
+     */
+    void validate_hex(const Colors& pColors)
     {
-        for (const auto& it : colors) {
+        for (const auto& it : pColors) {
             bool flag = pfs::validate_hex_notation(it);
             if (!flag) {
                 std::cerr << "error: Hex code " << it << " is invalid.\n";
                 break;
             }
+        }
+    }
+
+    /**
+     * @brief The color mixer's algorithm.
+     *
+     * @param pColors The colors container
+     */
+    void mix(const Colors& pColors)
+    {
+        struct RGB {
+            double R;
+            double G;
+            double B;
+        };
+
+        std::stringstream ss {};
+        RGB newColor {};
+
+        for (size_t i = 0, len = pColors.size(); i < len; i++) {
+            RGB color {};
+            unsigned int value = 0U;
+
+            ss << std::hex << pColors.at(i);
+            ss >> value;
+
+            color.R = ((value >> 16) & 0xFF) / 255.0;
+            color.G = ((value >> 8) & 0xFF) / 255.0;
+            color.B = (value & 0xFF) / 255.0;
+
+            newColor = {(newColor.R + color.R) / 2, (newColor.G + color.G) / 2,
+                (newColor.B + color.B) / 2};
+
+            ss.clear();
         }
     }
 } // namespace ns
@@ -83,6 +122,7 @@ int main()
 
     ns::get_colors_from_user(colors);
     ns::validate_hex(colors);
+    ns::mix(colors);
 
     return EXIT_SUCCESS;
 }
