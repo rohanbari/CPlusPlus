@@ -2,7 +2,7 @@
  * @file ColorMixer.cpp
  * @author Rohan Bari (rohanbari4@gmail.com)
  * @brief This program can calculate the new color obtained by the combination
- * of two or more colors using hex code.
+ * of two or more colors using hex code. (incomplete)
  *
  * @version 0.1
  * @date 17-01-2023
