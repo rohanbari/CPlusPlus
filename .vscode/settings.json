@@ -69,5 +69,6 @@
         "unordered_set": "cpp",
         "numbers": "cpp",
         "semaphore": "cpp"
-    }
+    },
+    "python.analysis.typeCheckingMode": "basic"
 }
