@@ -7,7 +7,6 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-Wall",
-                "-O3",
                 "-pedantic",
                 "-Wextra",
                 "-g",
